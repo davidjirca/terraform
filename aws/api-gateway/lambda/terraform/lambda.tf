@@ -1,20 +1,20 @@
 # Data source to package Lambda functions
 data "archive_file" "api_handler_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../lambda/api_handler"
-  output_path = "${path.module}/../lambda/packages/api_handler.zip"
+  source_dir  = "${path.module}/../api-handler"
+  output_path = "${path.module}/../packages/api_handler.zip"
 }
 
 data "archive_file" "queue_processor_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../lambda/queue_processor"
-  output_path = "${path.module}/../lambda/packages/queue_processor.zip"
+  source_dir  = "${path.module}/../queue-processor"
+  output_path = "${path.module}/../packages/queue_processor.zip"
 }
 
 data "archive_file" "status_checker_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../lambda/status_checker"
-  output_path = "${path.module}/../lambda/packages/status_checker.zip"
+  source_dir  = "${path.module}/../status-checker"
+  output_path = "${path.module}/../packages/status_checker.zip"
 }
 
 # API Handler Lambda Function
